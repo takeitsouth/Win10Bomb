@@ -1,0 +1,193 @@
+﻿<UserControl x:Class="Bombardier.TabPages.Results"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Bombardier.TabPages"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:appCtrls="using:Bombardier.AppControls"
+             mc:Ignorable="d">
+    <Grid Background="#FF262626">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="1"
+                 Grid.Column="0"
+                 Text="Thrust"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 VerticalAlignment="Center"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="Thrust"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="2"
+                 Grid.Column="0"
+                 Text="Flex"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 VerticalAlignment="Center"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="Flex"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="3"
+                 Grid.Column="0"
+                 Text="Flaps"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 VerticalAlignment="Center"
+                 BorderBrush="{x:Null}"
+                 FontWeight="Bold" />
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="Flaps"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="4"
+                 Grid.Column="0"
+                 Text="V1"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 VerticalAlignment="Center"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="V1"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="5"
+                 Grid.Column="0"
+                 Text="VR"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 VerticalAlignment="Center"
+                 FontWeight="Bold"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="VR"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="6"
+                 Grid.Column="0"
+                 Text="Acceleration Height"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 VerticalAlignment="Center"
+                 TextWrapping="Wrap"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="Accel Ht"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="7"
+                 Grid.Column="0"
+                 Text="MTOW (Perf)"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 VerticalAlignment="Center"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="7"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="MTOW"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="8"
+                 Grid.Column="0"
+                 Text="Limitation"
+                 VerticalAlignment="Center"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="8"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="Limitation"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Grid.Row="9"
+                 Grid.Column="0"
+                 Text="Stop Margin"
+                 Background="#FF262626"
+                 Foreground="#FFFFFF"
+                 FontWeight="Bold"
+                 VerticalAlignment="Center"
+                 BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="9"
+                 Grid.Column="1"
+                 Background="#000000"
+                 PlaceholderText="Stop Margin"
+                 BorderBrush="{x:Null}">
+        </TextBox>
+
+        <Border x:ConnectionId='1' x:Name="EFP"
+                Grid.Row="11"
+                Grid.RowSpan="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="3">
+            <TextBox></TextBox>
+        </Border>
+
+        <Grid Grid.Row="18"
+              Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Grid.Column="0">Calculate</Button>
+            <Button HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Grid.Column="1">Clear All</Button>
+            <Button HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Grid.Column="2">FMS Disp</Button>
+
+        </Grid>
+    </Grid>
+</UserControl>
+

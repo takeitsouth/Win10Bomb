@@ -1,0 +1,108 @@
+﻿<Page x:Class="Bombardier.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Bombardier"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Page.Resources>
+    </Page.Resources>
+    <Grid Height="Auto"
+          Width="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="653*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Visibility="Visible">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="DarkGray"
+                                  Offset="0" />
+                    <GradientStop Color="#FF383838"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border BorderBrush="Black"
+                    BorderThickness="2">
+                <Grid Height="Auto"
+                      Width="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*" />
+                        <ColumnDefinition Width="9*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"
+                            BorderBrush="Black"
+                            BorderThickness="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBox x:Name="perfTypeText"
+                                     Text="Performance:"
+                                     Grid.Column="0"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     Background="{x:Null}"
+                                     BorderBrush="{x:Null}"
+                                     FontSize="18"
+                                     IsReadOnly="True" />
+                            <ComboBox x:Name="perfComboBox"
+                                      BorderThickness="0"
+                                      PlaceholderText="Takeoff"
+                                      Grid.Column="1"
+                                      Background="{x:Null}"
+                                      FontSize="18"
+                                      HorizontalAlignment="Left">
+                                <x:String>Takeoff</x:String>
+                                <x:String>Landing</x:String>
+                            </ComboBox>
+                        </Grid>
+                    </Border>
+
+                    <Button Grid.Column="3"
+                            Width="Auto"
+                            Height="Auto"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
+
+                    </Button>
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="2" />
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="2" />
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="2" />
+                    <Button x:Name="LoadContentButton"
+                            Grid.Column="3"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Bottom"
+                            Height="56" />
+
+                </Grid>
+
+            </Border>
+
+        </Grid>
+        <Grid Grid.Row="1"
+              Background="#FF3F3F3F">
+            <ContentControl x:Name="MainContentPlaceholder"
+                            HorizontalContentAlignment="Stretch"
+                            VerticalContentAlignment="Stretch"
+                            Grid.Row="1"/>
+
+        </Grid>
+        </Grid>
+</Page>

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Bombardier.AppControls.RunwayImg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Bombardier.AppControls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+
+    <Grid>
+        <Image Height="200"
+               Width="200"
+               Source="rwy.bmp"></Image>
+        <Rectangle Fill="#FFD1C921"
+                   Opacity="0.5"
+                   Margin="360,585,358,736" />
+    </Grid>
+</UserControl>
+

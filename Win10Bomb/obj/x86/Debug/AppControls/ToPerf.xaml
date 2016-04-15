@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="Bombardier.AppControls.ToPerf"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Bombardier.AppControls"
+             xmlns:localTabPages="using:Bombardier.TabPages"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Width="785.2">
+
+    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch"
+          MinHeight="1024"
+          MinWidth="768"
+          Background="#FF3F3F3F">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="653*" />
+            <RowDefinition Height="30*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0"
+                    Grid.Row="1"
+                    Background="#FF0C0C0C">
+            <Border Height="40"
+                    Background="#FF262626"
+                    BorderBrush="#FF070707"
+                    BorderThickness="4">
+                <TextBox Text="Airport &amp; Meteorological"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                         Background="#FF262626"
+                         Foreground="#FFF9FFFC"
+                         BorderBrush="{x:Null}"
+                         FontWeight="Bold"
+                         Margin="28,4,0,4"></TextBox>
+            </Border>
+            <local:LabelTextBox Lbl="Airport">
+            </local:LabelTextBox>
+            <local:LabelComboBox Lbl="Runway"></local:LabelComboBox>
+            <local:LabelTextBox Lbl="OAT (degC)"></local:LabelTextBox>
+            <local:LabelTextBox Lbl="Wind (deg/KT)"></local:LabelTextBox>
+            <local:LabelTextBox Lbl="QNH (hPA)"></local:LabelTextBox>
+            <local:LabelComboBox x:ConnectionId='1' x:Name="RunwayConditions" Lbl="Runway Condition"></local:LabelComboBox>
+            <Border Height="40"
+                    BorderThickness="4"
+                    BorderBrush="#FF090909"
+                    Background="#FF262626">
+                <TextBox Text="Aircraft Configuration"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Background="#FF262626"
+                         Foreground="#FFF9FFFC"
+                         BorderBrush="{x:Null}"
+                         FontWeight="Bold"></TextBox>
+            </Border>
+            <local:LabelTextBox Lbl="TOW (kg)"></local:LabelTextBox>
+            <local:LabelComboBox Lbl="Thrust"></local:LabelComboBox>
+            <local:LabelComboBox Lbl="Flaps"></local:LabelComboBox>
+            <local:LabelComboBox Lbl="Air Conditioning"></local:LabelComboBox>
+            <local:LabelComboBox Lbl="Anti-Ice"></local:LabelComboBox>
+            <local:LabelTextBox Lbl="CG"></local:LabelTextBox>
+            <local:LabelTextBox Lbl="Rolling Takeoff"></local:LabelTextBox>
+
+
+
+
+        </StackPanel>
+        <Pivot Margin="0, 0, 0, 0"
+               Grid.Column="1"
+               Grid.RowSpan="3">
+            <PivotItem VariableSizedWrapGrid.RowSpan="2"
+                       Background="#FF262626">
+                <PivotItem.Header>
+                    <Button BorderBrush="White"
+                            BorderThickness="4"
+                            Height="46"
+                            Width="Auto"
+                            FontWeight="Bold">
+                        Airport Info</Button>
+                </PivotItem.Header>
+            </PivotItem>
+            <PivotItem VariableSizedWrapGrid.RowSpan="2">
+                <PivotItem.Header>
+                    <Button BorderBrush="White"
+                            BorderThickness="4"
+                            Height="46"
+                            Width="Auto"
+                            FontWeight="Bold"
+                            Background="#FF686868">
+                        MEL/CDL</Button>
+
+                </PivotItem.Header>
+                <localTabPages:MelCdl></localTabPages:MelCdl>                
+            </PivotItem>
+            <PivotItem VariableSizedWrapGrid.RowSpan="2">
+                <PivotItem.Header>
+                    <Button BorderBrush="White"
+                            BorderThickness="4"
+                            Height="46"
+                            Width="Auto">
+                        NOTAM</Button>
+                </PivotItem.Header>
+                <localTabPages:Notam></localTabPages:Notam>
+            </PivotItem>
+            <PivotItem VariableSizedWrapGrid.RowSpan="2">
+                <PivotItem.Header>
+                    <Button BorderBrush="White"
+                            BorderThickness="4"
+                            Height="46"
+                            Width="Auto">
+                        Results</Button>
+                </PivotItem.Header>
+                <localTabPages:Results></localTabPages:Results>
+            </PivotItem>
+        </Pivot>
+        <!--<local:TabControlTest Grid.Column="1"
+                              Grid.RowSpan="3" />-->
+
+    </Grid>
+</UserControl>
+
